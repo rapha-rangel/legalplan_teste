@@ -3,11 +3,17 @@
 import { createContext, useState, ReactNode, } from "react";
 import { OpenModalTypes } from "@/types/open-modal-types";
 
-export const OpenModalContext = createContext({
+interface OpenModalContextType{
+  isOpen: boolean;
+  setIsOpen:(value: boolean)=>void
+  type: OpenModalTypes
+  setType:(value: OpenModalTypes)=>void
+}
+export const OpenModalContext = createContext<OpenModalContextType>({
   isOpen:false,
-	setIsOpen:(value:boolean)=> {},
+	setIsOpen:()=> {},
 	type:OpenModalTypes.ADD,
-	setType:(value:OpenModalTypes)=>{}
+	setType:()=>{}
 })
 
 interface ProviderProps{
@@ -18,7 +24,6 @@ export function OpenModalContextProvider({children}: ProviderProps){
 
   const [isOpen, setIsOpen] = useState(false);
 	const [type, setType] = useState(OpenModalTypes.ADD);
-
 
   return (
     <OpenModalContext.Provider

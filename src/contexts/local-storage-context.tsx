@@ -31,7 +31,6 @@ export function LocalStorageContextProvider({children}: ProviderProps){
   const updateLocalStorage =(value:TaskTypes[])=>{
     setItems(value);
     localStorage.setItem("task-items", JSON.stringify(value));
-		console.log(value)
   }
 
   return (
