@@ -1,0 +1,82 @@
+$BackgroundColor: #ffff;
+$BorderColor:#EAECF0;
+$FontWeightNormalLight: 400;
+$FontSizeNormal: 16px;
+$LetterSpacing:-0.02em;
+$BoxShadowColor:#1018282E;
+$FontSizeBig: 24px;
+$FontWeightNormal: 500;
+$SubtitleColor:#0000008A;
+
+.modal__container {
+	position: absolute;
+  top:50%;
+	left:50%;
+	transform: translate(-50%, -50%);
+	max-width:450px;
+	border: 1px solid $BorderColor;
+	border-radius:16px;
+	padding: 32px;
+	flex-direction: column;
+  z-index: 10;
+	background-color: $BackgroundColor;
+	box-shadow: 0px 24px 48px -12px $BoxShadowColor;
+	gap: 32px;
+	opacity: 1;
+	transition: all 500ms;
+	h4 {
+		font-size: $FontSizeBig;
+		font-weight: $FontWeightNormal;
+		line-height: 29.04px;
+		letter-spacing: $LetterSpacing;
+	}
+	p{
+		font-size: $FontSizeNormal;
+		font-weight: $FontWeightNormalLight;
+		line-height: 24px;
+		letter-spacing: $LetterSpacing;
+		color: $SubtitleColor;
+	}
+}
+
+.notShow{
+	opacity: 0;
+	display: none;
+	animation-name: fadeOutRunModal;
+  animation-duration: 2s;
+	animation-fill-mode: forwards;
+}
+
+.show{
+	opacity: 1;
+	display: flex;
+	animation-name: fadeInRunModal;
+  animation-duration: 1s;
+}
+
+.wrapper__btn{
+	display: flex;
+	justify-content: space-between;
+	gap: 16px;
+}
+
+.wrapper__btn .btn{
+	width: 185px;
+	padding: 16px 24px 16px 24px;
+	border-radius: 8px ;
+}
+
+@media screen and (max-width:450px) {
+	.modal__container {
+		height: 100vh;
+		width:100%;
+		border:none;
+		border-radius:none;
+	}
+	.wrapper__btn{
+		flex-direction: column-reverse;
+	}
+	.wrapper__btn .btn{
+		width: 100%;
+	}
+}

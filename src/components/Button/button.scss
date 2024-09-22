@@ -1,0 +1,42 @@
+$BackgroundColorButtonAddFirst:#0796D3;
+$BackgroundColorButtonAddSecond:#53C0F0;
+$FontWeightNormal: 500;
+$FontWeightNormalLight: 400;
+$FontSizeNormal: 16px;
+$LetterSpacing: -0.02em;
+$ColorSpan:#FFFFFF;
+$ColorSpanCancelar:black;
+$BackgroundColorCancelarBtn:#E7EEFB;
+$BackgroundColorButtonDeleteFirst:#D30707;
+$BackgroundColorButtonDeleteSecond:#F05353;
+
+button {
+	display: block;
+	padding: 16px 24px 16px 24px;
+	border-radius: 8px;
+	background: linear-gradient(90deg, $BackgroundColorButtonAddFirst 0%, $BackgroundColorButtonAddSecond 68.65%);
+	border: none;
+	cursor: pointer;
+	span {
+		font-size: $FontSizeNormal;
+		font-weight: $FontWeightNormal;
+		line-height: 19.36px;
+		letter-spacing: $LetterSpacing;
+		color: $ColorSpan;
+	}
+}
+
+#Cancelar {
+	background: $BackgroundColorCancelarBtn;
+}
+
+#Cancelar{
+	span{
+		color: $ColorSpanCancelar;
+		font-weight: $FontWeightNormalLight;
+	}
+}
+
+#Deletar {
+	background: linear-gradient(90deg, $BackgroundColorButtonDeleteFirst 0%, $BackgroundColorButtonDeleteSecond 68.65%);
+}

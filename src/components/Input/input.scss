@@ -1,0 +1,40 @@
+$OutlineColor: #53C0F0;
+$BorderColor:#D7DDE9;
+$FontWeightNormalLight: 400;
+$FontSizeNormal: 16px;
+$InputColor: #0000008F;
+$LetterSpacing:-0.02em;
+
+.wrapper__input{
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+}
+
+.wrapper__input{ 
+	label{
+		font-size: $FontSizeNormal;
+		font-weight: $FontWeightNormalLight;
+		line-height: 19.36px;
+		letter-spacing: $LetterSpacing;
+		text-align: left;
+	}
+	input{
+		padding: 16px ;
+		gap: 16px;
+		border-radius: 8px ;
+		border: 1px solid $BorderColor;
+		font-size: $FontSizeNormal;
+		font-weight: $FontWeightNormalLight;
+		line-height: 19.36px;
+		letter-spacing: $LetterSpacing;
+		text-align: left;
+		color: $InputColor;
+		transition: all 50ms ease-in-out;
+		outline: none;
+	}
+}
+
+.wrapper__input input:focus{
+	outline: 2px solid #53C0F0;
+}

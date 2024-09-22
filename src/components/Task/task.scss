@@ -1,0 +1,47 @@
+
+
+.task__div {
+	display: flex;
+	width: 100%;
+	border: 1px dashed #D7DDE9;
+	padding: 16px;
+	gap: 16px;
+	align-items: center;
+	border-radius: 8px;
+	p{ 
+		font-size: 16px;
+	font-weight: 400;
+	line-height: 19.36px;
+	letter-spacing: -0.02em;
+	padding-left: 20px;
+	text-align: left;
+	transition: all 500ms;
+	}
+	span{
+		margin-left: auto;
+	}
+}
+
+.fadeIn {
+	animation-name: fadeInRun;
+  animation-duration: 1s;
+}
+
+.fadeOut {
+	animation-name: fadeOutRun;
+  animation-duration: 1s;
+}
+
+.task__div:hover {
+	border: 1px solid #F7F9FD;
+	background: #F7F9FD;
+	cursor: pointer;
+	transition:all 250ms ;
+}
+
+
+#mostrar{
+	text-decoration: line-through;
+	color: #0000008A;
+	transition: all 250ms;
+}
